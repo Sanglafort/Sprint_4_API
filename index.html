@@ -8,23 +8,29 @@
     <style>
         body {
             background-image: url('/sprint4/images/riendo-gente-colaborando-estudiando.jpg');
-            background-size: cover;          
+            background-size: cover;
+             
+        }
+        .container {
+            padding: 10px;
+            border-style:groove;
+            border-color: rgb(4, 152, 4);
+            border-radius: 5px;
+            background-color: rgb(235, 245, 235);
+
         }
     </style>
 </head>
 <body>
     <header class="header">
         <nav class="navbar shadow">
-            <span class="navbar-text fw-bold d-flex align-items-center">
-                <img src="" id="weatherIcon" class="me-3 border-end pe-3">
-                <p id="weatherInfo" class="fs-4 text-center"></p>
-              </span>
+            <span class="navbar-text text-muted" >Hoy: Parcialmente nublado</span>
         </nav>
     </header>
 
     <div class="container text-center mt-4">
         <h3>¿Listo para unas risas?</h3>
-        <p id="jokeContainer"></p>
+        <p id="jokeContainer" class="jokeContainer fst-italic"></p>
         <button type="submit" class="btn btn-success" id="button">Otro chiste</button>
     </div>
 
