@@ -39,3 +39,20 @@ button.addEventListener('click', () => {
     (randomNumber > 0.5) ? getJoke() : getChuckNorrisJoke();
 });
 [];
+const reportJokes = [];
+function scores(number) {
+    let vote = document.getElementById('jokeContainer'); //para encontrar el chiste en el document HTML...
+    let joke = vote === null || vote === void 0 ? void 0 : vote.innerHTML; //...si se encuentra sera un string y si no se encuentra sera undefined (el signo de interrogación '?' significa que es variable opcional)
+    //Para cambiar la votación antes de pasar al siguiente chiste: Si cada item.joke que se puntua es igual a joke eso significa que ya se ha puntuado antes, es decir, ya esta dentro del array reportJokes . Para cambiar la puntuación, eliminamos ese elemento del array (1 elemento desde el index que estamos iterando) y añadimos el nuevo elemento con la nueva puntuación.
+    reportJokes.forEach((item, index) => {
+        if (item.joke === joke) {
+            reportJokes.splice(index, 1);
+        }
+    });
+    let score = number;
+    let date = new Date().toISOString();
+    // Creamos la variable scoredJoke que sera la que (tomando como modelo el interface ReportJokes) vaya añadiendo elementos al array reportJokes
+    let scoredJoke = { joke, score, date };
+    reportJokes.push(scoredJoke);
+    console.log(reportJokes);
+}
