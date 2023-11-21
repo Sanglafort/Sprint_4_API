@@ -31,7 +31,12 @@
     <div class="container text-center mt-4">
         <h3>¿Listo para unas risas?</h3>
         <p id="jokeContainer" class="jokeContainer fst-italic"></p>
-        <button type="submit" class="btn btn-success" id="button">Otro chiste</button>
+        <div class="scoreButtons">
+            <button class="btn fs-2" id="score1" onclick="badJoke(1)">😒</button>
+            <button class="btn fs-2" id="score2" onclick="regularJoke(2)">😑</button>
+            <button class="btn fs-2" id="score3" onclick="goodJoke(3)">🤩</button>
+        </div>
+        <button type="submit" class="btn btn-success mt-2" id="button">Otro chiste</button>
     </div>
 
     <script src="index.js"></script>
